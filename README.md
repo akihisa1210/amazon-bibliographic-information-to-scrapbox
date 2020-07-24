@@ -7,3 +7,19 @@ Amazonのページから書誌情報を Scrapbox に取り込むブックマー�
 npm install
 npm run watch
 ```
+
+## Release
+
+### Create Release Pull Request
+
+```
+npm run release
+(Review and merge the release PR)
+```
+
+### Trigger Release
+
+```
+git switch master
+npx shipjs trigger
+```

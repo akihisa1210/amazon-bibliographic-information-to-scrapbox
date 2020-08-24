@@ -40,11 +40,31 @@ test("Scrape Ebook publish info", () => {
   //   </tbody>
   // </table>`;
 
-  const dom = `<div id="productDetailsTable">
-  <li><b>フォーマット：</b> Kindle版</li>
-  <li><b>ファイルサイズ：</b> 1044 KB</li>
-  <li><b>推定ページ数：</b> 350 ページ</li>
-  <li><b>出版社:</b> testPublisher (2020/1/1)</li>
+  const dom = `<div id="detailBullets_feature_div">
+<li><span class="a-list-item">
+<span class="detail-bullet-label a-text-bold">ファイルサイズ
+:
+</span>
+<span>7166 KB</span>
+</span></li>
+<li><span class="a-list-item">
+<span class="detail-bullet-label a-text-bold">出版社
+:
+</span>
+<span>testPublisher (2020/1/1)</span>
+</span></li>
+<li><span class="a-list-item">
+<span class="detail-bullet-label a-text-bold">推定ページ数
+:
+</span>
+<span>435ページ</span>
+</span></li>
+<li><span class="a-list-item">
+<span class="detail-bullet-label a-text-bold">Word Wise
+:
+</span>
+<span>有効にされていません</span>
+</span></li>
 </div>`;
 
   document.body.innerHTML = dom;
@@ -163,10 +183,15 @@ test("Scrape paper book image url", () => {
 });
 
 test("Scrape paper book publish info", () => {
-  const dom = `<div id="detail_bullets_id">
-  <ul>
-    <li><b>出版社:</b> testPaperBookPublisher (2020/1/1)</li>
-  </ul>
+  const dom = `<div id="detailBulletsWrapper_feature_div">
+<ul>
+<li><span class="a-list-item">
+<span class="detail-bullet-label a-text-bold">出版社
+:
+</span>
+<span>testPaperBookPublisher (2020/1/1)</span>
+</span></li>
+</ul>
 </div>`;
   document.body.innerHTML = dom;
 

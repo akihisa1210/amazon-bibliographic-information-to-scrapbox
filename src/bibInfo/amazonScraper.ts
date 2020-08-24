@@ -15,27 +15,31 @@ export class AmazonScraper {
 
   scrapeEbookPublishInfo(): PublishInfo {
     const rawPublishInfo: string = document.getElementById(
-      "productDetailsTable"
+      "detailBullets_feature_div"
     ).textContent;
 
     return this.generatePublishInfo(rawPublishInfo);
   }
 
   scrapePaperBookPublishInfo(): PublishInfo {
-    const rawPublishInfo: string = document.getElementById("detail_bullets_id")
-      .textContent;
+    const rawPublishInfo: string = document.getElementById(
+      "detailBulletsWrapper_feature_div"
+    ).textContent;
 
     return this.generatePublishInfo(rawPublishInfo);
   }
 
   private generatePublishInfo(rawPublishInfo: string): PublishInfo {
+    console.log(rawPublishInfo); // Debug
     const publishInfoArray: RegExpMatchArray = rawPublishInfo.match(
-      /(出版社:.+)(\(.+\))/
+      /(出版社\n:\n\n.*)(\(.*\))/
     );
-    let publisher = publishInfoArray[1];
+    console.log(publishInfoArray); // Debug
+    let publisher = publishInfoArray[1].replace(/\r?\n/g, "");
+    console.log(publisher); // Debug
 
     // TODO: Move linking function to other place.
-    publisher = publisher.replace(/:/, ":[");
+    publisher = publisher.replace(/:/, ":[ ");
     publisher = publisher.match(/;/)
       ? publisher.replace(/;/, "];")
       : publisher + "]";

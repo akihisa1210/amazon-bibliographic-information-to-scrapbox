@@ -71,8 +71,8 @@ test("Scrape Ebook publish info", () => {
 
   const scraper = new AmazonScraper();
   const expectedPublishInfo: PublishInfo = {
-    publisher: "出版社:[ testPublisher ]",
-    publishDate: "([2020/1]/1)",
+    publisher: "testPublisher",
+    publishDate: "2020/1/1",
   };
   expect(scraper.scrapeEbookPublishInfo()).toEqual(expectedPublishInfo);
 });
@@ -197,8 +197,8 @@ test("Scrape paper book publish info", () => {
 
   const scraper = new AmazonScraper();
   const expectedPublishInfo: PublishInfo = {
-    publisher: "出版社:[ testPaperBookPublisher ]",
-    publishDate: "([2020/1]/1)",
+    publisher: "testPaperBookPublisher",
+    publishDate: "2020/1/1",
   };
   expect(scraper.scrapePaperBookPublishInfo()).toEqual(expectedPublishInfo);
 });

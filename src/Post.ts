@@ -1,4 +1,4 @@
-import { BibInfo, AuthorInfo } from "./bibInfo/bibInfo";
+import { BibInfo, AuthorInfo, PublishInfo } from "./bibInfo/bibInfo";
 
 export class PostTitle {
   title: string;
@@ -30,10 +30,20 @@ export class ScrapboxBibliographicInformation {
     return authorsLink;
   }
 
+  private makePublishYearAndMonthLink(publishInfo: PublishInfo): string {
+    const publishDate = new Date(publishInfo.publishDate);
+    // e.g. [2020/1]/1
+    return `[${publishDate.getFullYear()}/${
+      publishDate.getMonth() + 1
+    }]/${publishDate.getDate()}`;
+  }
+
   constructor(info: BibInfo) {
     this.scrapboxInfo = `[${info.imageUrl} ${info.sourceUrl}]
 ${this.makeAuthorsLink(info.authorsInfo).join(" ")}
-${info.publishInfo.publisher} ${info.publishInfo.publishDate}
+出版社: [${info.publishInfo.publisher}] (${this.makePublishYearAndMonthLink(
+      info.publishInfo
+    )})
 ISBN/ASIN: ${info.isbn}
 >${info.description.replace(/\n/g, "\n>")}
 #本

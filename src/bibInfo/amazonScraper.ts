@@ -30,21 +30,11 @@ export class AmazonScraper {
   }
 
   private generatePublishInfo(rawPublishInfo: string): PublishInfo {
-    console.log(rawPublishInfo); // Debug
     const publishInfoArray: RegExpMatchArray = rawPublishInfo.match(
-      /(出版社\n:\n\n.*)(\(.*\))/
+      /出版社\r?\n:\r?\n\r?\n(.*)\((.*)\)/
     );
-    console.log(publishInfoArray); // Debug
-    let publisher = publishInfoArray[1].replace(/\r?\n/g, "");
-    console.log(publisher); // Debug
-
-    // TODO: Move linking function to other place.
-    publisher = publisher.replace(/:/, ":[ ");
-    publisher = publisher.match(/;/)
-      ? publisher.replace(/;/, "];")
-      : publisher + "]";
-
-    const publishDate = publishInfoArray[2].replace(/\((\d+\/\d+)\//, "([$1]/");
+    const publisher = publishInfoArray[1].trim();
+    const publishDate = publishInfoArray[2];
 
     const publishInfo: PublishInfo = {
       publisher: publisher,

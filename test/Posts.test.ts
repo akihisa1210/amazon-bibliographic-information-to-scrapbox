@@ -25,7 +25,7 @@ test("Valid post content is created from bibliographic information", () => {
     isbn: "sampleAsin",
     publishInfo: {
       publisher: "samplePublisher",
-      publishDate: "samplePublishDate",
+      publishDate: "2020/1/1",
     },
     description: `sampleDescription1
 sampleDescription2
@@ -48,7 +48,7 @@ sampleDescription3`,
 
   const expectedContent = `[sampleImageUrl sampleCurrentUrl]
 [author1](contribution1) [author2](contribution2)
-samplePublisher samplePublishDate
+出版社: [samplePublisher] ([2020/1]/1)
 ISBN/ASIN: sampleAsin
 >sampleDescription1
 >sampleDescription2

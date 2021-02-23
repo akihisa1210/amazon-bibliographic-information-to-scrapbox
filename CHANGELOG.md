@@ -1,3 +1,7 @@
+## [1.0.5](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.4...v1.0.5) (2021-02-23)
+
+
+
 ## [1.0.4](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.3...v1.0.4) (2021-02-22)
 
 

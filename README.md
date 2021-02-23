@@ -3,23 +3,29 @@ Amazonのページから書誌情報を Scrapbox に取り込むブックマー�
 
 ## Development
 
+### Setup
+
 ```
 npm install
 npm run watch
 ```
 
+### Commit
+
+Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). [git-cz](https://github.com/streamich/git-cz) is useful.
+
+```
+npx git-cz
+```
+
 ## Release
 
-### Create Release Pull Request
-
+1. Run `npm run release` on main branch.
 ```
+git switch main
 npm run release
-(Review and merge the release PR)
 ```
 
-### Trigger Release
+2. Release Pull Request is created by the above command. Review and merge the PR into main branch.
 
-```
-git switch master
-npx shipjs trigger
-```
+3. GitHub Actions releases the main branch.

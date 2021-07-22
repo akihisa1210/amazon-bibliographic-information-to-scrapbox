@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.5...v1.0.6) (2021-07-22)
+
+
+### Bug Fixes
+
+* follow amazon dom change ([57d3032](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/57d3032edb3a82f6ce84280d9af9b4062fc58c31))
+
+
+
 ## [1.0.5](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.4...v1.0.5) (2021-02-23)
 
 

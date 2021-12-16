@@ -32,11 +32,11 @@ export class AmazonScraper {
 
   private generatePublishInfo(rawPublishInfo: string): PublishInfo {
     const publishInfoArray: RegExpMatchArray = rawPublishInfo.match(
-      /出版社‏:‎(.*?)\((.*?)\)/
+      /出版社\s*‏\s*:\s*‎\s*(.*?)\((.*?)\)/
     );
     console.log("publishInfoArray:", publishInfoArray); // debug
     const publisher = publishInfoArray[1].trim();
-    const publishDate = publishInfoArray[2];
+    const publishDate = publishInfoArray[2].trim();
 
     const publishInfo: PublishInfo = {
       publisher: publisher,

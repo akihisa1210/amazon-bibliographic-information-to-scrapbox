@@ -198,29 +198,14 @@ ue.count("acrStarsLinkWithPopoverClickCount", (ue.count("acrStarsLinkWithPopover
 });
 
 test("Scrape description", () => {
-  // <iframe id="bookDesc_iframe">
-  //   <div id="iframeContent">
-  //     <b>sampleDescription1</b><br>
-  //     sampleDescription2<br>
-  //     sampleDescription3<br>
-  //   </div>
-  // </iframe>`;
+  const dom = `<div id="bookDescription_feature_div" class="celwidget" data-feature-name="bookDescription" data-csa-c-id="xopw35-e04zjb-5s5xvj-xhffwj" data-cel-widget="bookDescription_feature_div">
+  <div aria-live="polite" data-a-expander-name="book_description_expander" data-a-expander-collapsed-height="140" class="a-expander-collapsed-height a-row a-expander-container a-spacing-base a-expander-partial-collapse-container" style="max-height: none; height: auto;"> <div aria-expanded="true" class="a-expander-content a-expander-partial-collapse-content a-expander-content-expanded" style="padding-bottom: 20px;"> <b>sampleDescription1</b><br>sampleDescription2<br>sampleDescription3</div> <div class="a-expander-header a-expander-partial-collapse-header" style="opacity: 1; display: block;"><div class="a-expander-content-fade" style="display: none;"></div><a href="javascript:void(0)" data-action="a-expander-toggle" class="a-declarative" data-a-expander-toggle="{&quot;allowLinkDefault&quot;:true, &quot;expand_prompt&quot;:&quot;続きを読む&quot;, &quot;collapse_prompt&quot;:&quot;もっと少なく読む&quot;}"><i class="a-icon a-icon-extender-collapse"></i><span class="a-expander-prompt">もっと少なく読む</span></a></div> </div>                                  </div>`;
 
-  const iframe = document.createElement("iframe");
-  iframe.id = "bookDesc_iframe";
-  document.body.appendChild(iframe);
-
-  const iframeContent = document.createElement("div");
-  iframeContent.id = "iframeContent";
-  iframeContent.innerHTML = `<b>sampleDescription1</b><br>sampleDescription2<br>sampleDescription3<br>`;
-
-  iframe.contentWindow.document.body.appendChild(iframeContent);
-
+  document.body.innerHTML = dom;
   const scraper = new AmazonScraper();
   expect(scraper.scrapeDescription()).toBe(`sampleDescription1
 sampleDescription2
-sampleDescription3
-`);
+sampleDescription3`);
 });
 
 test("Scrape empty description", () => {

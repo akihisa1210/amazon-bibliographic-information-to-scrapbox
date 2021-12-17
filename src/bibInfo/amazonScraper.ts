@@ -46,18 +46,18 @@ export class AmazonScraper {
   }
 
   scrapeDescription(): string {
-    const bookDescIframe: HTMLIFrameElement = document.getElementById(
-      "bookDesc_iframe"
-    ) as HTMLIFrameElement;
-    if (bookDescIframe === null) {
+    const descriptionDiv = document.querySelector(
+      "#bookDescription_feature_div > div > div.a-expander-content.a-expander-partial-collapse-content"
+    );
+
+    if (descriptionDiv === null) {
       return "";
     }
-    const iframeContent = bookDescIframe.contentDocument.getElementById(
-      "iframeContent"
-    );
-    return iframeContent.innerHTML
+
+    return descriptionDiv.innerHTML
       .replace(/<\/?b>/g, "")
-      .replace(/<br>/g, "\n");
+      .replace(/<br>/g, "\n")
+      .trim();
   }
 
   scrapeEbookImageUrl(): string {

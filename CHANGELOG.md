@@ -1,3 +1,13 @@
+## [1.0.7](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.6...v1.0.7) (2021-12-17)
+
+
+### Bug Fixes
+
+* respond to DOM change of pubisher info ([#74](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/issues/74)) ([c1a41dd](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/c1a41dde5c9f6502918c3b11171db44f465c0101))
+* scrape description ([#76](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/issues/76)) ([6033369](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/6033369a7048dd991543532e521e88b00275cd27))
+
+
+
 ## [1.0.6](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.5...v1.0.6) (2021-07-22)
 
 

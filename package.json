@@ -1,6 +1,6 @@
 {
   "name": "amazon-bibliographic-information-to-scrapbox",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Amazonのページから書誌情報を Scrapbox に取り込むブックマークレットです。元ネタ: https://rashita.net/blog/?p=26075",
   "main": "index.js",
   "devDependencies": {

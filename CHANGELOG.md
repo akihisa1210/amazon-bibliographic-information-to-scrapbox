@@ -1,3 +1,14 @@
+## [1.0.9](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.8...v1.0.9) (2023-10-24)
+
+
+### Bug Fixes
+
+* 🐛 mock document ([65b55a1](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/65b55a1e68a88309a36aeaa9c512c6bfcb6b857c))
+* follow the changes of HTML elements ([718190d](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/718190d984bee7f9923a4828c7d31654a4845705))
+* generate local output in all target ([a8b3ffe](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/a8b3ffed437779fab9876c53f647b35e2d80da0b))
+
+
+
 ## [1.0.8](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.7...v1.0.8) (2022-03-06)
 
 

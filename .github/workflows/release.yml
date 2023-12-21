@@ -19,6 +19,9 @@ jobs:
           cache: 'npm'
       - run: |
           npm ci
-      - run: npx shipjs trigger
+      - run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "actions-user"
+          npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

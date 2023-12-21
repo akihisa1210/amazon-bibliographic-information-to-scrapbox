@@ -1,3 +1,18 @@
+## [1.0.11](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.10...v1.0.11) (2023-12-21)
+
+
+### Bug Fixes
+
+* enforce URL encoding ([ef69334](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/ef69334d50434c34382bc8ad4e5b955ff0943e9a))
+* remove colon ([964de76](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/964de76ebb9727130b361b6d5e4d19696a63e2cf))
+
+
+### Reverts
+
+* Revert "chore: release v1.0.11 (#120)" ([11b31f3](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/commit/11b31f3de4d34067d092fa840911225a2f33d3de)), closes [#120](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/issues/120)
+
+
+
 ## [1.0.10](https://github.com/akihisa1210/amazon-bibliographic-information-to-scrapbox/compare/v1.0.9...v1.0.10) (2023-10-24)
 
 
